@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Designer Portfolio</title>
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+      font-family: Arial, sans-serif;
+      scroll-behavior: smooth;
+    }
+    body {
+      background-color: navy;
+      color: white;
+    }
+    header {
+      position: fixed;
+      top: 0; left: 0; width: 100%;
+      background: rgba(0,0,50,0.9);
+      padding: 15px 30px;
+      display: flex; justify-content: space-between; align-items: center;
+      z-index: 1000;
+    }
+    header h1 { font-size: 20px; }
+    nav a {
+      margin: 0 12px;
+      color: white; text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    nav a:hover { color: red; }
+    section {
+      min-height: 100vh;
+      display: flex; justify-content: center; align-items: center;
+      flex-direction: column;
+      padding: 80px 20px;
+    }
+    #home img {
+      width: 200px; border-radius: 50%; margin: 20px;
+    }
+    .btn {
+      padding: 12px 25px;
+      background: red;
+      border: none;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 20px;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+    .btn:hover { background: darkred; }
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      width: 90%;
+    }
+  .portfolio {
+    min-height: auto;
+    padding-bottom: 20px;
+}
+
+.portfolio h2 {
+    margin-bottom: 4rem;
+}
+
+.portfolio .portfolio-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.portfolio-container  .portfolio-box {
+    position: relative;
+    display: flex;
+    border-radius: 50px ;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, .1);
+    overflow: hidden;
+}
+
+.portfolio-box img {
+    width: 120px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 100%;
+    border: .4rem solid var(--bg-color);
+    outline: .4rem solid var(--main-color);
+    display: block;
+    overflow: hidden;
+}
+
+.portfolio-box:hover img {
+    transform: scale(1.1);
+}
+
+.portfolio-box .portfolio-layer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, .1), var(--main-color));
+    color: var(--white-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 4rem;
+    opacity: 0;
+    transition: .5s ease;
+}
+
+.portfolio-box:hover .portfolio-layer {
+    opacity: 1;
+}
+
+.portfolio-layer h4 {
+    font-size: 3rem;
+}
+
+.portfolio-layer p {
+    font-size: 1.6rem;
+    margin: .3rem 0 1rem;
+}
+
+.portfolio-layer a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    background: var(--white-color);
+    border-radius: 50%;
+}
+
+.portfolio-layer a i {
+    font-size: 2rem;
+    color: #333;
+}
+    .card {
+      background: rgba(255,255,255,0.1);
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+    }
+    .card img {
+      width: 100%; border-radius: 10px;
+    }
+    .social {
+      margin-top: 20px;
+    }
+    .social a {
+      margin: 0 10px;
+      font-size: 20px;
+      color: white;
+      transition: 0.3s;
+    }
+    .social a:hover { color: red; }
+    form {
+      display: flex; flex-direction: column; width: 300px;
+    }
+    form input, form textarea {
+      padding: 10px; margin: 8px 0;
+      border: none; border-radius: 5px;
+    }
+    form button { margin-top: 10px; }
+  
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>My Portfolio</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about me">about me</a>
+      <a href="#projects">Projects</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Home -->
+  <section id="home">
+    <h2>M Theerthagiri</h2>
+    <img src="/storage/emulated/0/Pictures/Gallery/owner/my photo /1754329022151.jpg" alt="My Photo">
+    <p>I create modern, responsive websites.</p>
+    <div class="social">
+      <a href="#">🌐</a>
+      <a href="#">🐦</a>
+      <a href="#">📸</a>
+    </div>
+  </section>
+  
+<section id="about me">
+  <h2>about me</h2>
+  <p>
+    I Am M.Theerthagiri
+  </p>
+  <!-- Projects -->
+ <section id="projects" class="section">
+         <div class="portfolio" id="portfolio">
+          <h2 class="heading">Latest <span>Project</span></h2>
+           
+           <div class="portfolio-container">
+            <div class="portfolio-box">
+                <img src="https://blog.codepen.io/wp-content/uploads/2017/03/demo-project.jpg" alt="">
+
+                <div class="portfolio-layer">
+                    
+              <a href="https://codepen.io/M-Theerthagiri/pen/QwjVdJJ"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+            <div class="portfolio-box">
+                <img src="https://i.ytimg.com/vi/ziUp_L3zWQ4/sddefault.jpg"alt="">
+
+                <div class="portfolio-layer">
+                     <a href="https://codepen.io/M-Theerthagiri/pen/RNWYKdL"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+            <div class="portfolio-box">
+                <img src="https://i0.wp.com/css-tricks.com/wp-content/uploads/2017/04/vim-mode.png?ssl=1" alt="">
+
+                <div class="portfolio-layer">
+                      <a href="https://codepen.io/M-Theerthagiri/pen/pvjORXm"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+            
+            <div class="portfolio-box">
+                <img src="https://i.ytimg.com/vi/ziUp_L3zWQ4/sddefault.jpg" alt="">
+
+                <div class="portfolio-layer">
+                    <h4>Week 4</h4>
+                    <a href="https://codepen.io/bfluedxh-the-decoder/pen/MYaoOeL"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+            
+           </div>
+         </section>
+  <!-- Services -->
+  <section id="services">
+    <h2>My Services</h2>
+    <p>I provide web design, responsive layouts, and front-end development.</p>
+    <div class="projects">
+      <div class="card"><h3>Web Design</h3></div>
+      <div class="card"><h3>Responsive Design</h3></div>
+      <div class="card"><h3>UI/UX Design</h3></div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <input type="text" placeholder="Subject" required>
+      <textarea rows="4" placeholder="Message"></textarea>
+      <button type="submit" class="btn">Send</button>
+    </form>
+  </section>
+
+  <!-- CV Download -->
+  <section id="cv">
+    <h2>Download My CV</h2>
+    <a href="cv.pdf" download><button class="btn">Download CV</button></a>
+  </section>
+
+  <script>
+    // JS for navigation highlight (optional)
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll("nav a");
+
+    window.addEventListener("scroll", () => {
+      let current = "";
+      sections.forEach(sec => {
+        const secTop = sec.offsetTop - 100;
+        if (pageYOffset >= secTop) current = sec.getAttribute("id");
+      });
+      navLinks.forEach(link => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === "#" + current) {
+          link.classList.add("active");
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
